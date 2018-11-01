@@ -1,0 +1,7 @@
+SonarQube:  
+  image: sonar-scanner
+  variables:  
+    SONAR_KEY: "<YOUR PROJECT KEY>"  
+    SONAR_HOST: "http://<YOUR_SERVER_IP>"  
+  script:  
+  - /sonar-scanner-wrapper

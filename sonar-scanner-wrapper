@@ -1,0 +1,19 @@
+exec sonar-scanner \
+  -Dsonar.projectName=$CI_PROJECT_NAME \
+  -Dsonar.projectKey=$SONAR_KEY \
+  -Dsonar.projectVersion=$CI_BUILD_ID \
+  -Dsonar.sources=. \
+  -Dsonar.host.url=$SONAR_HOST
+
+# following unused
+-Dsonar.host.url=\"$URL\" 
+-Dsonar.login=\"$USER\" 
+-Dsonar.password=\"$PASSWORD\" 
+-Dsonar.projectKey=\"$SONAR_PROJECT_KEY\""
+-Dsonar.projectVersion=\"$SONAR_PROJECT_VERSION\""
+-Dsonar.projectName=\"$SONAR_PROJECT_NAME\""
+-Dsonar.gitlab.commit_sha=\"$CI_BUILD_REF\""
+-Dsonar.gitlab.ref_name=\"$CI_BUILD_REF_NAME\""
+-Dsonar.branch=\"$SONAR_BRANCH\""
+-Dsonar.analysis.mode=\"$SONAR_ANALYSIS_MODE\""
+-Dsonar.issuesReport.console.enable=true"
